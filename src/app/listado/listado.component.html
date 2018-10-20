@@ -1,0 +1,13 @@
+<div *ngIf="genero">
+	 <h2>Detalle para: {{genero.name | uppercase}}</h2>
+	 <br> 
+	 <div>
+	 	<ul class="list-group">
+			<li *ngFor="let listado of listado">
+					<span *ngIf="{{genero.id}}==1">
+						{{listado.name}}
+					</span> 
+			</li>
+		</ul>
+	 </div>
+</div>

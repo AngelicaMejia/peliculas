@@ -1,0 +1,20 @@
+<div class="row col-sm-12">
+	<div class="container">
+	<h2 class="">Generos </h2>
+	</div>
+	<br>
+	<div class="col-sm-6">
+		<ul class="list-group">
+			<li>
+				<div *ngFor="let genero of generos"
+				[class.selected]="genero === selectedGeneros"
+				(click)="onSelect(genero)">
+					<span class="badge">{{genero.name}}</span> 
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="col-sm-6">
+		<app-listado [generos]="selectedGeneros" > </app-listado>
+	</div>
+</div>
